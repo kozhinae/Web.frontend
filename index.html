@@ -8,76 +8,82 @@
     <title>Резюме Екатерины Кожиной</title>
     <link rel="stylesheet" href="outlines.css">
 </head>
-<body>
-<header>
-    <h1>Екатерина Кожина</h1>
-    <p><b>Контактные данные:</b></p>
-    <ul>
-        <li>Телефон: +7921*****47</li>
-        <li>Email: <a href="mailto:katerinabonia@mail.ru" target="_blank">katerinabonia@mail.ru</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/kate-kozhina" target="_blank">linkedin/kate-kozhina</a></li>
-        <li>GitHub: <a href="https://github.com/kozhinae" target="_blank">github.com/kozhinae</a></li>
+<body class="page">
+<header class="header">
+    <h1 class="header__title">Екатерина Кожина</h1>
+    <img class="header__photo"
+         src="https://sun9-18.userapi.com/impg/nDKRf6irv-IIqaPELdNrlJjN7pr84BV0bejrog/FS6w1Xq60P4.jpg?size=1200x1600&quality=95&sign=a52eefa9683b762e7ca05ef55141276c&type=album"
+         alt="Фотография Екатерины Кожиной">
+    <p class="header__contact-title"><b>Контактные данные:</b></p>
+    <ul class="header__contact-list">
+        <li class="header__contact-item">Телефон: +7921*****47</li>
+        <li class="header__contact-item">Email: <a href="mailto:katerinabonia@mail.ru" target="_blank"
+                                                   class="header__link">katerinabonia@mail.ru</a></li>
+        <li class="header__contact-item">LinkedIn: <a href="https://linkedin.com/kate-kozhina" target="_blank"
+                                                      class="header__link">linkedin/kate-kozhina</a></li>
+        <li class="header__contact-item">GitHub: <a href="https://github.com/kozhinae" target="_blank"
+                                                    class="header__link">github.com/kozhinae</a></li>
     </ul>
 </header>
-<main>
-    <section>
-        <h2>Навыки</h2>
-        <ul>
-            <li><strong>Языки программирования:</strong> C#, Python, C++, Java</li>
-            <li><strong>Инструменты:</strong> MySQL, PostgreSQL, Git, Clion, PyCharm, DataGrip, IntelliJ IDEA, Gradle</li>
-            <li><strong>Языки:</strong> Английский C1, Немецкий A2</li>
+<main class="main-content">
+    <section class="skills">
+        <h2 class="skills__title">Навыки</h2>
+        <ul class="skills__list">
+            <li class="skills__item"><strong>Языки программирования:</strong> C#, Python, C++, Java</li>
+            <li class="skills__item"><strong>Инструменты:</strong> MySQL, PostgreSQL, Git, Clion, PyCharm, DataGrip,
+                IntelliJ IDEA, Gradle
+            </li>
+            <li class="skills__item"><strong>Языки:</strong> Английский C1, Немецкий A2</li>
         </ul>
     </section>
-    <section>
-        <h2>Проекты</h2>
-        <article>
-            <h3>Симулятор фэнтезийного космического передвижения | C#</h3>
-            <p>Система для расчёта продолжительности космических маршрутов с <strong>SOLID-принципами</strong>.</p>
+    <section class="projects">
+        <h2 class="projects__title">Проекты</h2>
+        <article class="projects__item">
+            <h3 class="projects__item-title">Симулятор фэнтезийного космического передвижения | C#</h3>
+            <img class="projects__item-photo"
+                 src="https://s0.rbk.ru/v6_top_pics/media/img/6/53/346916705155536.jpeg"
+                 alt="Симулятор фэнтезийного передвижения">
+            <p class="projects__item-description">Система для расчёта продолжительности космических маршрутов с <strong>SOLID-принципами</strong>.
+            </p>
         </article>
-        <article>
-            <h3>Курс валют | C++, Cmake, nlohmann, libcurl</h3>
-            <p>Парсинг JSON и передача данных через curl с API Центробанка.</p>
+        <article class="projects__item">
+            <h3 class="projects__item-title">Курс валют | C++, Cmake, nlohmann, libcurl</h3>
+            <img class="projects__item-photo"
+                 src="https://money24.kr.ua/wp-content/uploads/2021/02/2.jpg"
+                 alt="Проект курс валют">
+            <p class="projects__item-description">Парсинг JSON и передача данных через curl с API Центробанка.</p>
         </article>
     </section>
-    <section>
-        <h2>Образование</h2>
-        <p>Бакалавриат, Информационные системы и технологии, ИТМО (Июнь 2026)</p>
-        <h2>Награды</h2>
-        <ul>
-            <li>Призер Регионального этапа ВСОШ 2021</li>
-            <li>Призер Олимпиады "Шаг в будущее" 2021</li>
+    <section class="education">
+        <h2 class="education__title">Образование</h2>
+        <p class="education__description">Бакалавриат, Информационные системы и технологии, ИТМО (Июнь 2026)</p>
+        <h2 class="education__title">Награды</h2>
+        <ul class="education__list">
+            <li class="education__item">Призер Регионального этапа ВСОШ 2021</li>
+            <li class="education__item">Призер Олимпиады "Шаг в будущее" 2021</li>
         </ul>
     </section>
-    <aside>
-        Люблю путешествовать, готова к релокации
-    </aside>
-    <pre>
+    <aside class="aside">Люблю путешествовать, готова к релокации</aside>
+    <pre class="ascii-art">
 /\\_/\\
 ( o.o )
-   ^
-</pre>
-    <h4>Мой первый код</h4>
-    <pre><code>public class HelloWorld {
+   ^</pre>
+    <h4 class="code-title">Мой первый код</h4>
+    <pre class="code-block"><code>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
 </code></pre>
-    <blockquote>
-        <h5>
-            “Моя формула успеха - работа 24/7<sup>2</sup>”
-        </h5>
-        <p>
-            <i>“Легкость дается тяжелым трудом” </i>
-        </p>
-        <cite> И.К. Айвазовский
-        </cite>
+    <blockquote class="quote">
+        <p class="quote__title">“Моя формула успеха - работа 24/7<sup>2</sup>”</p>
+        <p class="quote__text"><i>“Легкость дается тяжелым трудом”</i></p>
+        <cite class="quote__author">И.К. Айвазовский</cite>
     </blockquote>
-
 </main>
-<footer>
-    <p>Контактные данные для связи: <a href="https://t.me/k_kozhina" target="_blank">tg/k_kozhina</a></p>
+<footer class="footer">
+    <p class="footer__contact">Контактные данные для связи: <a href="https://t.me/k_kozhina" target="_blank"
+                                                               class="footer__link">tg/k_kozhina</a></p>
 </footer>
-
 </body>
 </html>

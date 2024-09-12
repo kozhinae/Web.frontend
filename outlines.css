@@ -1,17 +1,29 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  line-height: 1.6;
+.page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
 header, footer {
   background-color: #f4f4f4;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  color: #333;
+.header__title {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header__photo {
+  width: 120px;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 50%;
 }
 
 ul {
@@ -19,7 +31,7 @@ ul {
   padding: 0;
 }
 
-ul li {
+.header__contact-list li {
   margin: 5px 0;
 }
 
@@ -32,16 +44,57 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  margin-top: 20px;
+.main-content {
+  padding: 20px;
 }
 
-pre {
+.skills__title, .projects__title, .education__title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.projects__item, .skills__item, .education__item {
+  margin-bottom: 15px;
+}
+
+.projects__item-description, .projects__item-title, .education__description {
+  font-size: 1.1em;
+}
+
+.projects__item-photo {
+  width: 180px;
+  height: auto;
+  margin: 10px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects__item-photo:hover {
+  transform: scale(1.05);
+}
+
+.aside {
+  background-color: #e7f3ff;
+  padding: 10px;
+  border-left: 5px solid #1a73e8;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.ascii-art {
   background-color: #f4f4f4;
   padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-blockquote {
-  font-style: italic;
+.quote {
+  background-color: #f9f9f9;
+  border-left: 5px solid #1a73e8;
+  padding: 20px;
   margin: 20px 0;
+  font-style: italic;
+}
+
+.footer__contact {
+  font-size: 0.9em;
 }
