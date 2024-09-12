@@ -1,9 +1,15 @@
 .page {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto Light', sans-serif;
   color: #333;
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 header, footer {
@@ -84,7 +90,7 @@ a:hover {
 .ascii-art {
   background-color: #f4f4f4;
   padding: 10px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Roboto Light', Courier, monospace;
 }
 
 .quote {
@@ -93,6 +99,8 @@ a:hover {
   padding: 20px;
   margin: 20px 0;
   font-style: italic;
+  line-height: normal;
+  white-space: nowrap;
 }
 
 .footer__contact {
