@@ -177,14 +177,26 @@ blockquote {
 }
 
 .table-row {
-  display: contents;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .table-header {
-  grid-column: span 12;
+  grid-column: span 3;
   background-color: #f0f0f0;
   font-weight: bold;
   padding: 10px;
+}
+.table-row:nth-child(even) {
+  background-color: #aff5dc;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #ffdfc4;
+}
+
+.table-row:hover {
+  background-color: #ddd;
 }
 
 .table-row div {
