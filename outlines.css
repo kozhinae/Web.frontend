@@ -195,7 +195,9 @@ blockquote {
 .responsive-table tbody {
   display: contents;
 }
-
+.responsive-table tr {
+  display: contents;
+}
 .responsive-table td {
   padding: 10px;
   text-align: left;
