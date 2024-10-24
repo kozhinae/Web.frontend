@@ -173,35 +173,45 @@ blockquote {
 
 .responsive-table {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  margin-top: 20px;
 }
 
-.table-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.responsive-table thead {
+  display: contents;
 }
 
-.table-header {
-  grid-column: span 3;
+.responsive-table th {
   background-color: #f0f0f0;
   font-weight: bold;
   padding: 10px;
+  text-align: left;
 }
-.table-row:nth-child(even) {
+
+.responsive-table tbody {
+  display: contents;
+}
+
+.responsive-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) td {
   background-color: #aff5dc;
 }
 
-.table-row:nth-child(odd) {
+tbody tr:nth-child(odd) td {
   background-color: #ffdfc4;
 }
 
-.table-row:hover {
+tbody tr:hover td {
   background-color: #ddd;
-}
-
-.table-row div {
-  padding: 10px;
-  grid-column: span 4;
 }
 
 @media screen and (max-width: 768px) {
@@ -219,6 +229,9 @@ blockquote {
     position: static;
     transform: none;
     margin-top: 15px;
+  }
+  .responsive-table {
+    grid-template-columns: 1fr;
   }
 }
 
