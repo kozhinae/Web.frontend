@@ -28,6 +28,34 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a.active {
+  color: black;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
 .header__title {
   font-size: 2em;
   text-transform: uppercase;
@@ -91,6 +119,11 @@ a:hover {
   padding: 20px;
 }
 
+main {
+  padding: 20px;
+  text-align: center;
+}
+
 .skills__title, .projects__title, .education__title {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -104,7 +137,7 @@ a:hover {
   font-size: 1.1em;
 }
 
-.projects__item-photo {
+.projects__item-photo, .education__photo {
   width: 180px;
   height: auto;
   margin: 10px 0;
