@@ -1,8 +1,8 @@
 (function() {
     const navLinks = document.querySelectorAll('nav ul li a');
-    const currentLocation = document.location.pathname;
+    const currentLocation = document.location.href;
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentLocation.split('/').pop()) {
+        if (link.href === currentLocation) {
             link.classList.add('active');
         }
     });
