@@ -178,7 +178,7 @@ main {
 }
 
 .footer {
-  position: absolute;
+  position: static;
   overflow: auto;
   bottom: 0;
   width: 100%;
@@ -345,5 +345,51 @@ tbody tr:hover td {
   .header__contact-list {
     flex-direction: column;
   }
+}
+.generated-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
+.generated-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.generated-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.generated-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+td input {
+  width: 100%;
+  padding: 5px;
 }
