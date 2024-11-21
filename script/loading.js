@@ -35,21 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function renderUsers(users) {
         const tbody = document.querySelector('.responsive-table tbody');
+        const template = document.getElementById('rowTemplate');
         tbody.innerHTML = '';
-
-        const template = document.createElement('template');
-        template.innerHTML = `
-            <tr>
-                <td class="username"></td>
-                <td class="name"></td>
-                <td class="email"></td>
-                <td class="address"></td>
-                <td class="phone"></td>
-                <td class="website"><a href="" target="_blank"></a></td>
-                <td class="company"></td>
-            </tr>
-        `;
-
+        if (!template) {
+            console.error('Шаблон rowTemplate не найден!');
+            return;
+        }
+        console.log(template);
         users.forEach((user) => {
             const clone = template.content.cloneNode(true);
             const row = clone.querySelector('tr');
