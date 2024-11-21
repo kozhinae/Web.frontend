@@ -435,22 +435,47 @@ td input {
 .responsive-table {
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
   table-layout: fixed;
 }
 
 .responsive-table th, .responsive-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 0;
   text-align: left;
-  word-wrap: break-word;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .responsive-table th {
   background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .responsive-table td {
-  word-wrap: break-word;
-  max-width: 200px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.responsive-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.responsive-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.responsive-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-table th, .responsive-table td {
+    white-space: normal;
+  }
 }
