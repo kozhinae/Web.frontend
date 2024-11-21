@@ -435,13 +435,15 @@ td input {
 .responsive-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  table-layout: fixed;
 }
 
 .responsive-table th, .responsive-table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .responsive-table th {

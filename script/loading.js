@@ -34,44 +34,38 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
     function renderUsers(users) {
-        const existingTable = document.querySelector('.responsive-table');
-        if (existingTable) existingTable.remove();
-        const table = document.createElement('table');
-        table.className = 'responsive-table';
-        table.innerHTML = `
-            <thead>
-                <tr>
-                    <th>Имя пользователя</th>
-                    <th>Полное имя</th>
-                    <th>Email</th>
-                    <th>Адрес</th>
-                    <th>Телефон</th>
-                    <th>Веб-сайт</th>
-                    <th>Компания</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${users
-            .map(
-                (user) => `
-                    <tr>
-                        <td>${user.username}</td>
-                        <td>${user.name}</td>
-                        <td>${user.email}</td>
-                        <td>
-                            ${user.address.street}, ${user.address.suite}, 
-                            ${user.address.city}, ${user.address.zipcode}
-                        </td>
-                        <td>${user.phone}</td>
-                        <td><a href="http://${user.website}" target="_blank">${user.website}</a></td>
-                        <td>${user.company.name}</td>
-                    </tr>`
-            )
-            .join('')}
-            </tbody>
-        `;
-        tableSection.appendChild(table);
-    }
+        const tbody = document.querySelector('.responsive-table tbody');
+        tbody.innerHTML = '';
 
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <tr>
+                <td class="username"></td>
+                <td class="name"></td>
+                <td class="email"></td>
+                <td class="address"></td>
+                <td class="phone"></td>
+                <td class="website"><a href="" target="_blank"></a></td>
+                <td class="company"></td>
+            </tr>
+        `;
+
+        users.forEach((user) => {
+            const clone = template.content.cloneNode(true);
+            const row = clone.querySelector('tr');
+
+            row.querySelector('.username').textContent = user.username;
+            row.querySelector('.name').textContent = user.name;
+            row.querySelector('.email').textContent = user.email;
+            row.querySelector('.address').textContent = `${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`;
+            row.querySelector('.phone').textContent = user.phone;
+            const websiteLink = row.querySelector('.website a');
+            websiteLink.href = `http://${user.website}`;
+            websiteLink.textContent = user.website;
+            row.querySelector('.company').textContent = user.company.name;
+
+            tbody.appendChild(clone);
+        });
+    }
     fetchUsers();
 });
