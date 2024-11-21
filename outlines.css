@@ -393,3 +393,62 @@ td input {
   width: 100%;
   padding: 5px;
 }
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.preloader::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 3px solid #555;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.responsive-table th, .responsive-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #f4f4f4;
+}
+
+.responsive-table td {
+  word-wrap: break-word;
+  max-width: 200px;
+}
