@@ -14,6 +14,10 @@
     <script src="script/main.js" defer></script>
     <script src="script/load.js" defer></script>
     <script src="script/menu.js" defer></script>
+    <script src="script/modalwindow.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="page">
 <header class="header">
@@ -74,10 +78,15 @@
     </section>
     <section class="gallery">
         <h2>Галерея вечного</h2>
-        <div class="gallery__grid">
-            <img src="https://shop.rosquest.ru/wa-data/public/shop/products/38/10/1038/images/871/871.750@2x.jpg" alt="Горит огонь">
-            <img src="https://ibio-nn.ru/wp-content/uploads/2012/12/uaqmkbrc2zo41s935gewy0fp7vlxnhid6jt8.jpg" alt="Течет вода">
-            <img src="https://cdn.regnum.ru/uploads/pictures/news/2016/11/14/regnum_picture_1479117369232772_normal.jpg" alt="Звенят монеты">
+        <!--div class="gallery__grid"-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://cdn.regnum.ru/uploads/pictures/news/2016/11/14/regnum_picture_1479117369232772_normal.jpg" alt="Звенят монеты"></div>
+                <div class="swiper-slide"><img src="https://shop.rosquest.ru/wa-data/public/shop/products/38/10/1038/images/871/871.750@2x.jpg" alt="Горит огонь"></div>
+                <div class="swiper-slide"><img src="https://ibio-nn.ru/wp-content/uploads/2012/12/uaqmkbrc2zo41s935gewy0fp7vlxnhid6jt8.jpg" alt="Течет вода"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
     <section class="education">

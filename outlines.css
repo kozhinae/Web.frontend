@@ -479,3 +479,22 @@ td input {
     white-space: normal;
   }
 }
+
+.swiper-container {
+  width: 30%;
+  height: 300px;
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swal2-popup {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
