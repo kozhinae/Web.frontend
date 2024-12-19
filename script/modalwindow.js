@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            type: 'bullets',
+            renderBullet: function (index, className) {
+                return `<span class="${className}">${index + 1}</span>`;
+            },
         },
     });
 });
+
 
 document.querySelectorAll('.swiper-slide img').forEach((img) => {
     img.addEventListener('click', () => {

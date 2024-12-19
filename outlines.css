@@ -481,6 +481,7 @@ td input {
 }
 
 .swiper-container {
+  position: relative;
   width: 30%;
   height: 300px;
 }
@@ -497,4 +498,42 @@ td input {
   color: #333;
   background-color: #f9f9f9;
   border-radius: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.swiper-pagination span {
+  width: auto;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: black;
+  color: white;
 }
